@@ -1,4 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.preference.DropDownPreference
+        android:key="allowed_scope"
+        android:defaultValue="all"
+        android:entries="@array/pref_look_and_feel_allowed_notifications_scope_entries"
+        android:entryValues="@array/pref_look_and_feel_allowed_notifications_scope_values"
+        android:title="@string/pref_look_and_feel_allowed_notifications_scope" />
+
     <PreferenceCategory
         android:key="allowed"
         android:title="@string/pref_look_and_feel_allowed_notifications_allowed" />
