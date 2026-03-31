@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="allowed"
+        android:title="@string/pref_look_and_feel_allowed_notifications_allowed" />
+
+    <PreferenceCategory
+        android:key="available"
+        android:title="@string/pref_look_and_feel_allowed_notifications_available" />
+</PreferenceScreen>
