@@ -78,6 +78,12 @@ class LAFRulesActivity : BaseActivity() {
                 Intent(requireContext(), LAFFilterNotificationsActivity::class.java),
             )
 
+            PreferenceScreenHelper.linkPreferenceToActivity(
+                this,
+                "pref_allowed_notifications",
+                Intent(requireContext(), LAFAllowedNotificationsActivity::class.java),
+            )
+            
             rulesTime.setOnPreferenceClickListener {
                 TimePickerDialog(
                     context,
