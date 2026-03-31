@@ -120,17 +120,12 @@ class AboutActivity : BaseActivity() {
                 startActivity(Intent(requireContext(), LibraryActivity::class.java))
                 true
             }
-            findPreference<Preference>("donate")?.setOnPreferenceClickListener {
-                startActivity(Intent(Intent.ACTION_VIEW, DONATE_URL.toUri()))
-                true
-            }
         }
     }
 
     companion object {
-        private const val REPOSITORY: String = "Heitezy/PeekDisplay"
+        private const val REPOSITORY: String = "Fubuz/PeekDisplay"
         private const val BRANCH: String = "main"
         private const val REPOSITORY_URL: String = "https://github.com/$REPOSITORY"
-        private const val DONATE_URL: String = "https://www.paypal.com/donate/?hosted_button_id=TLTPDERG5X4VA"
     }
 }
