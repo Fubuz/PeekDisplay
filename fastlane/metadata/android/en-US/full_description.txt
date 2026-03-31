@@ -23,5 +23,5 @@ Choose your perfect watch face, adjust behavior and background, and keep everyth
 - Minimal and privacy-respecting permissions
 
 <font color="#2467d6"><b>Related Links</b></font>
-Source code: <a href="https://github.com/Heitezy/PeekDisplay">https://github.com/Heitezy/PeekDisplay</a>
+Source code: <a href="https://github.com/Fubuz/PeekDisplay">https://github.com/Fubuz/PeekDisplay</a>
 Icons8: <a href="https://icons8.com/">https://icons8.com/</a>
