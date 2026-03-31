@@ -28,4 +28,4 @@ Please add steps to reproduce the behavior._
 
  - Android version: _System Settings > About > Android version (varies per device)_
  - AlwaysOn version: _Settings > About > Version_
- - Installation source: _Google Play / Own Build_
+ - Installation source: _Github / Own Build_
