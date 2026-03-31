@@ -231,6 +231,14 @@
     <string name="pref_look_and_feel_filter_notifications_empty_summary">It seems that there is nothing to show</string>
     <string name="pref_look_and_feel_filter_notifications_unknown">Unknown application</string>
 
+    <string name="pref_look_and_feel_allowed_notifications">Allowed notifications</string>
+    <string name="pref_look_and_feel_allowed_notifications_summary">Choose which installed apps may show notifications on Peek Display.</string>
+    <string name="pref_look_and_feel_allowed_notifications_allowed">Allowed apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_available">Installed apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_empty">No apps allowed</string>
+    <string name="pref_look_and_feel_allowed_notifications_empty_summary">Leave this empty to allow notifications from all installed apps.</string>
+    <string name="pref_look_and_feel_allowed_notifications_unknown">Unknown application</string>
+    
     <string name="pref_look_and_feel_tint_notifications">Tint notifications</string>
     <string name="pref_look_and_feel_tint_notifications_summary">Tint notifications in their app colors</string>
     <string name="pref_look_and_feel_display_size">Display size</string>
