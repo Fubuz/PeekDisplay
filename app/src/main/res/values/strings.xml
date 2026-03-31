@@ -233,12 +233,19 @@
 
     <string name="pref_look_and_feel_allowed_notifications">Allowed notifications</string>
     <string name="pref_look_and_feel_allowed_notifications_summary">Choose which installed apps may show notifications on Peek Display.</string>
+    <string name="pref_look_and_feel_allowed_notifications_scope">App type</string>
+    <string name="pref_look_and_feel_allowed_notifications_scope_installed_summary">Showing installed apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_scope_system_summary">Showing system apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_scope_all_summary">Showing all apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_search_hint">Search apps</string>
     <string name="pref_look_and_feel_allowed_notifications_allowed">Allowed apps</string>
-    <string name="pref_look_and_feel_allowed_notifications_available">Installed apps</string>
+    <string name="pref_look_and_feel_allowed_notifications_available">Matching apps</string>
     <string name="pref_look_and_feel_allowed_notifications_empty">No apps allowed</string>
     <string name="pref_look_and_feel_allowed_notifications_empty_summary">Leave this empty to allow notifications from all installed apps.</string>
+    <string name="pref_look_and_feel_allowed_notifications_no_results">No apps match this filter</string>
+    <string name="pref_look_and_feel_allowed_notifications_no_results_summary">Try a different search term or scope.</string>
     <string name="pref_look_and_feel_allowed_notifications_unknown">Unknown application</string>
-    
+
     <string name="pref_look_and_feel_tint_notifications">Tint notifications</string>
     <string name="pref_look_and_feel_tint_notifications_summary">Tint notifications in their app colors</string>
     <string name="pref_look_and_feel_display_size">Display size</string>
