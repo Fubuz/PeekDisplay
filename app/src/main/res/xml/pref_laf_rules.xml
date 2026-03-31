@@ -37,6 +37,12 @@
         android:summary="@string/pref_look_and_feel_filter_notifications_summary"
         android:title="@string/pref_look_and_feel_filter_notifications" />
 
+    <Preference
+        android:icon="@drawable/ic_notification"
+        android:key="pref_allowed_notifications"
+        android:title="@string/pref_look_and_feel_allowed_notifications"
+        android:summary="@string/pref_look_and_feel_allowed_notifications_summary" />
+    
     <ListPreference
         android:defaultValue="always"
         android:entries="@array/pref_look_and_feel_rules_charging_state_display"
