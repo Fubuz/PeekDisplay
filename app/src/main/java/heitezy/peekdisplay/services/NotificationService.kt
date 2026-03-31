@@ -129,15 +129,18 @@ class NotificationService : NotificationListenerService() {
         Handler(Looper.getMainLooper()).postDelayed({ sentRecently = false }, MINIMUM_UPDATE_DELAY)
     }
 
-    private fun isValidNotification(notification: StatusBarNotification): Boolean =
-        !notification.isOngoing &&
-            !JSON.contains(
-                JSONArray(
-                    PreferenceManager.getDefaultSharedPreferences(this)
-                        .getString("blocked_notifications", "[]"),
-                ),
-                notification.packageName,
-            )
+    private fun isValidNotification(notification: StatusBarNotification): Boolean {
+        if (notification.isOngoing) return false
+
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val blocked = JSONArray(prefs.getString("blocked_notifications", "[]"))
+        if (JSON.contains(blocked, notification.packageName)) return false
+
+        val allowed = JSONArray(prefs.getString("allowed_notifications", "[]"))
+        return JSON.isEmpty(allowed) || JSON.contains(allowed, notification.packageName)
+    }
+
 
     companion object {
         const val MINIMUM_UPDATE_DELAY: Long = 1000
