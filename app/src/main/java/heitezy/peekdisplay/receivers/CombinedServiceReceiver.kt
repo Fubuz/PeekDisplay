@@ -1,5 +1,6 @@
 package heitezy.peekdisplay.receivers
 
+import heitezy.peekdisplay.services.NotificationService
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -80,6 +81,29 @@ class CombinedServiceReceiver : BroadcastReceiver() {
         val rules = Rules(context)
         isScreenOn = false
 
+        // Re-scan currently active notifications when the screen turns off.
+        // This catches missed-call notifications that were posted while the call UI was still on-screen.
+        NotificationService.activeService?.refreshNotifications()
+
+        // If we're in Ambient mode and there is already a valid notification,
+        // launch AOD now instead of relying only on the notification-post moment.
+        if (
+            Rules.isAmbientMode(context) &&
+            !hasRequestedStop &&
+            !isAlwaysOnRunning &&
+            NotificationService.count > 0 &&
+            rules.canShow(context)
+        ) {
+            context.startActivity(
+                Intent(
+                    context,
+                    AlwaysOn::class.java,
+                ).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+            )
+            return
+        }
+
+        // Keep the existing behavior for everything else.
         // Hide software keyboard if it's showing
         if (NotificationPreview.isReplyActive()) {
             AlwaysOn.getInstance()?.let { alwaysOn ->
