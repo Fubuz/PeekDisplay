@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_look_and_feel_allowed_notifications_scope_entries">
+        <item>Installed apps</item>
+        <item>System apps</item>
+        <item>All apps</item>
+    </string-array>
+
+    <string-array name="pref_look_and_feel_allowed_notifications_scope_values">
+        <item>installed</item>
+        <item>system</item>
+        <item>all</item>
+    </string-array>
+</resources>
